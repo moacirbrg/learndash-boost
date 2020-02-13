@@ -37,6 +37,18 @@ class Woo_Fix_Integrations_User {
             $user->remove_role( 'subscriber' );
             $user->add_role( 'customer' );
 
+            $email_template_replacements = array(
+                'first_name' => $first_name,
+                'url' => get_permalink( get_option('woocommerce_myaccount_page_id') ),
+                'email' => $email,
+                'username' => $username,
+                'password' => htmlspecialchars( $password, ENT_HTML5 ),
+                'site_name' => get_bloginfo( 'name' )
+            );
+            $email_message = Woo_Fix_Integrations_Template::get( 'email-new-user.html', $email_template_replacements );
+            $email_headers = array( 'Content-Type: text/html; charset=UTF-8' );
+            wp_mail( $email, 'Sua conta foi criada', $email_message, $email_headers );
+
             return $user_id;
         }
         else {

@@ -10,6 +10,7 @@ class Woo_Fix_Integrations {
 
     public static function includes() {
         include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-log.php';
+        include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-template.php';
         include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-user.php';
         include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-order.php';
     }

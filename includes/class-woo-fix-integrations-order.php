@@ -15,8 +15,5 @@ class Woo_Fix_Integrations_Order {
         }
 
         update_post_meta( $order_id, '_customer_user', $user_id );
-
-        $e = print_r( array( $email, $user_id ), true );
-        Woo_Fix_Integrations_Log::debug( $e );
     }
 }
