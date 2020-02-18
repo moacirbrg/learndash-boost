@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class Woo_Fix_Integrations_Template {
     public static function get( $filename, $replacements = [] ) {
         $template_filepath = dirname( WOO_FIX_INTEGRATIONS_FILE ) . "/templates/${filename}";

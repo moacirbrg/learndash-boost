@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class Woo_Fix_Integrations {
     public static function init() {
         self::includes();
@@ -13,6 +17,11 @@ class Woo_Fix_Integrations {
         include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-template.php';
         include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-user.php';
         include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/class-woo-fix-integrations-order.php';
+
+        if ( is_admin() ) {
+            include_once dirname( WOO_FIX_INTEGRATIONS_FILE ) . '/includes/admin/class-woo-fix-integrations-admin-page.php';
+            Woo_Fix_Integrations_Admin_Page::init();
+        }
     }
 
     public static function woocommerce_order_status_processing( $order_id ) {

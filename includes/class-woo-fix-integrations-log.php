@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class Woo_Fix_Integrations_Log {
     public static $source = 'woo-fix-integrations';
 

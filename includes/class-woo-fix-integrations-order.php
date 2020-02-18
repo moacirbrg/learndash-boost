@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class Woo_Fix_Integrations_Order {
     public static function attach_user_to_order( $order_id ) {
         $order = wc_get_order( $order_id );

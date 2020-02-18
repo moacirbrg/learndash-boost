@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class Woo_Fix_Integrations_User {
     public static function create_unique_username_by_fullname( $first_name, $last_name ) {
         $first_name = strtolower($first_name);

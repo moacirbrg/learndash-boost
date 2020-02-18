@@ -14,10 +14,12 @@
  * @package Woo_Fix_Integrations
  */
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 define( 'WOO_FIX_INTEGRATIONS_FILE', __FILE__ );
+define( 'WOO_FIX_INTEGRATIONS_NS', 'woo-fix-integrations' );
+define( 'WOO_FIX_INTEGRATIONS_SLUG', 'woo-fix-integrations' );
 
 if ( ! class_exists( 'Woo_Fix_Integrations' ) ) {
 	include_once dirname( __FILE__ ) . '/includes/class-woo-fix-integrations.php';
