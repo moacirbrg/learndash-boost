@@ -1,10 +1,11 @@
 <?php
+namespace WooFixIntegrations;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Woo_Fix_Integrations_User {
+class User {
     public static function create_unique_username_by_fullname( $first_name, $last_name ) {
         $first_name = strtolower($first_name);
         $last_name = strtolower($last_name);
@@ -17,7 +18,7 @@ class Woo_Fix_Integrations_User {
             }
         }
 
-        Woo_Fix_Integrations_Log::error( $e );
+        Log::error( $e );
         return null;
     }
 
@@ -49,7 +50,7 @@ class Woo_Fix_Integrations_User {
                 'password' => htmlspecialchars( $password, ENT_HTML5 ),
                 'site_name' => get_bloginfo( 'name' )
             );
-            $email_message = Woo_Fix_Integrations_Template::get( 'email-new-user.html', $email_template_replacements );
+            $email_message = Template::get( 'email-new-user.html', $email_template_replacements );
             $email_headers = array( 'Content-Type: text/html; charset=UTF-8' );
             wp_mail( $email, 'Sua conta foi criada', $email_message, $email_headers );
 

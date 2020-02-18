@@ -13,6 +13,8 @@
  *
  * @package Woo_Fix_Integrations
  */
+use WooFixIntegrations\Plugin;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -22,6 +24,6 @@ define( 'WOO_FIX_INTEGRATIONS_NS', 'woo-fix-integrations' );
 define( 'WOO_FIX_INTEGRATIONS_SLUG', 'woo-fix-integrations' );
 
 if ( ! class_exists( 'Woo_Fix_Integrations' ) ) {
-	include_once dirname( __FILE__ ) . '/includes/class-woo-fix-integrations.php';
-	Woo_Fix_Integrations::init();
+	include_once dirname( __FILE__ ) . '/includes/plugin.php';
+	Plugin::init();
 }

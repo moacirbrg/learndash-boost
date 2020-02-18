@@ -1,10 +1,11 @@
 <?php
+namespace WooFixIntegrations\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class Woo_Fix_Integrations_Admin_Page {
+class Integrations_Page {
     public static function init() {
         add_action( 'admin_menu', array( __CLASS__, 'init_admin_menu' ) );
     }

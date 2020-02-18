@@ -1,10 +1,11 @@
 <?php
+namespace WooFixIntegrations;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Woo_Fix_Integrations_Log {
+class Log {
     public static $source = 'woo-fix-integrations';
 
     public static function debug( $message ) {
