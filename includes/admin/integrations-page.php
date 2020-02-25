@@ -1,26 +1,26 @@
 <?php
-namespace WooFixIntegrations\Admin;
+namespace Learndash_Boost\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 class Integrations_Page {
-    public static function init() {
-        add_action( 'admin_menu', array( __CLASS__, 'init_admin_menu' ) );
-    }
+	public static function init() {
+		add_action( 'admin_menu', array( __CLASS__, 'init_admin_menu' ) );
+	}
 
-    public static function init_admin_menu() {
-        add_submenu_page(
-            'woocommerce',
-            __( 'Woo Fix Integrations', WOO_FIX_INTEGRATIONS_NS ),
-            __( 'Woo Fix Integrations', WOO_FIX_INTEGRATIONS_NS ),
-            'manage_options',
-            WOO_FIX_INTEGRATIONS_SLUG,
-            array( __CLASS__, 'init_admin_page' ));
-    }
+	public static function init_admin_menu() {
+		add_submenu_page(
+			'woocommerce',
+			__( 'Learndash Boost', LEARNDASH_BOOST_NS ),
+			__( 'Learndash Boost', LEARNDASH_BOOST_NS ),
+			'manage_options',
+			LEARNDASH_BOOST_SLUG,
+			array( __CLASS__, 'init_admin_page' ));
+	}
 
-    public static function init_admin_page() {
-        echo 'Hello world!';
-    }
+	public static function init_admin_page() {
+		echo 'Hello world!';
+	}
 }
