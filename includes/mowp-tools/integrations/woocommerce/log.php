@@ -1,5 +1,5 @@
 <?php
-namespace Learndash_Boost;
+namespace Learndash_Boost\MOWP_Tools\Integrations\Woocommerce;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

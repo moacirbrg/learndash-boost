@@ -1,5 +1,5 @@
 <?php
-namespace Learndash_Boost;
+namespace Learndash_Boost\Core;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

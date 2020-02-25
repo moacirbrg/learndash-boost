@@ -1,5 +1,8 @@
 <?php
-namespace Learndash_Boost;
+namespace Learndash_Boost\Core;
+
+use Learndash_Boost\MOWP_Tools\Integrations\Woocommerce\Log;
+use Learndash_Boost\MOWP_Tools\Utils\Template;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -18,7 +21,6 @@ class User {
 			}
 		}
 
-		Log::error( $e );
 		return null;
 	}
 
@@ -50,7 +52,7 @@ class User {
 				'password' => htmlspecialchars( $password, ENT_HTML5 ),
 				'site_name' => get_bloginfo( 'name' )
 			);
-			$email_message = Template::get( 'email-new-user.html', $email_template_replacements );
+			$email_message = Template::get_from_file( 'email-new-user.html', $email_template_replacements );
 			$email_headers = array( 'Content-Type: text/html; charset=UTF-8' );
 			wp_mail( $email, 'Sua conta foi criada', $email_message, $email_headers );
 
