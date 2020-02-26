@@ -6,8 +6,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Page_Title extends Component {
-	function __construct( $title ) {
-		parent::__construct( 'h1', false );
+	function __construct( $title, $id = null, $classes = [] ) {
+		parent::__construct( 'h1', false, $id, $classes );
+
+		$this->add_style_bulk( [
+			'color' => $this->get_theme()->color_text_primary,
+			'margin' => '0',
+		] );
+
 		$this->set_title( $title );
 	}
 
