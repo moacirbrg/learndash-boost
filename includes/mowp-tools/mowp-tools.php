@@ -18,6 +18,7 @@ class MOWP_Tools {
 			include_once dirname( __FILE__ ) . '/options/components/hr.php';
 			include_once dirname( __FILE__ ) . '/options/components/page-header.php';
 			include_once dirname( __FILE__ ) . '/options/components/page-title.php';
+			include_once dirname( __FILE__ ) . '/options/pages/page.php';
 			include_once dirname( __FILE__ ) . '/options/pages/simple-page.php';
 		}
 	}

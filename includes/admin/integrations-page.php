@@ -23,7 +23,7 @@ class Integrations_Page {
 	}
 
 	public static function init_admin_page() {
-		$page = new Simple_Page();
+		$page = new Simple_Page( 'Learndash boost' );
 		echo $page->build_html();
 	}
 }

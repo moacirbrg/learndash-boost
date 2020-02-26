@@ -7,9 +7,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Simple_Page {
-	public function build_html() {
-		$page_title = new Page_Header( 'My first title' );
-		return $page_title->build_html();
+class Simple_Page extends Page {
+	public function __construct( $title ) {
+		parent::__construct( 'div', false, null, ['page'] );
+
+		$children = $this->create_children_components( $title );
+
+		foreach ( $children as $child ) {
+			$this->append_child( $child );
+		}
+	}
+
+	private function create_children_components( $title ) {
+		$children = [];
+
+		$page_title = new Page_Header( $title );
+		array_push( $children, $page_title );
+
+		return $children;
 	}
 }
