@@ -50,8 +50,8 @@ class HTML_Element {
 		}
 	}
 
-	public function append_child( $component ) {
-		array_push( $this->children, $component );
+	public function append_child( HTML_Element $html_element ) {
+		array_push( $this->children, $html_element );
 	}
 
 	public function build_html() {
