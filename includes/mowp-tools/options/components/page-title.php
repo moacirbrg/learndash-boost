@@ -1,0 +1,21 @@
+<?php
+namespace Learndash_Boost\MOWP_Tools\Options\Components;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+class Page_Title extends Component {
+	function __construct( $title ) {
+		parent::__construct( 'h1', false );
+		$this->set_title( $title );
+	}
+
+	public function get_title() {
+		return $this->get_content();
+	}
+
+	public function set_title( $title ) {
+		$this->set_content( $title );
+	}
+}

@@ -1,6 +1,8 @@
 <?php
 namespace Learndash_Boost\Admin;
 
+use Learndash_Boost\MOWP_Tools\Options\Pages\Simple_Page;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -21,6 +23,7 @@ class Integrations_Page {
 	}
 
 	public static function init_admin_page() {
-		echo 'Hello world!';
+		$page = new Simple_Page();
+		echo $page->build_html();
 	}
 }
