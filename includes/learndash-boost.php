@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Plugin {
+class Learndash_Boost {
 	public static function init() {
 		self::init_mowp_tools();
 
