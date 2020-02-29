@@ -17,11 +17,15 @@ class Learndash_Boost {
 
 		self::include_frontend_dependencies();
 		self::init_frontend();
+		
+		add_action( 'plugins_loaded', function() {
+			load_plugin_textdomain( LEARNDASH_BOOST_NS, FALSE, basename( dirname( LEARNDASH_BOOST_ROOT_PATH ) ) . '/languages/' );
+		} );
 
-		if ( is_admin() ) {
+		add_action( 'init', function() {
 			self::include_admin_dependencies();
 			self::init_admin();
-		}
+		} );
 	}
 
 	private static function include_admin_dependencies() {
