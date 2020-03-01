@@ -6,14 +6,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Page_Header extends Component {
-	function __construct( $title ) {
+	public function __construct( $title ) {
 		$id = $this->create_id( 'page-header' );
 		parent::__construct( 'div', false, $id, [] );
 
 		$this->add_style_bulk( [
 			'background-color' => $this->get_theme()->color_primary,
-			'border-bottom' => '1px solid ' . $this->get_theme()->color_primary_shade,
 			'box-shadow' => '0 0 2px ' . $this->get_theme()->color_primary_shade,
+			'margin-bottom' => $this->to_px( $this->get_theme()->layout_page_padding_px * 2 ),
 			'margin-left' => $this->to_px( - $this->get_theme()->layout_page_padding_px ),
 			'padding' => $this->to_px( $this->get_theme()->layout_page_padding_px )
 		] );

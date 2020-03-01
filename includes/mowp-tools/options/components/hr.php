@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class HR extends Component {
-	function __construct( $id = null, $classes = [] ) {
+	public function __construct( $id = null, $classes = [] ) {
 		parent::__construct( 'hr', false, $id, $classes );
 	}
 }

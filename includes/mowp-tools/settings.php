@@ -18,6 +18,7 @@ class Settings {
 	public static $COLOR_TEXT_TERTIARY = '#72777c';
 
 	public static $LAYOUT_PAGE_PADDING_PX = 20;
+	public static $LAYOUT_PANEL_PADDING_PX = 16;
 
 	public static $ID_PREFIX = 'mowp-comp-';
 }

@@ -70,6 +70,18 @@ class HTML_Element {
 		return $this->theme;
 	}
 
+	public function remove_child( HTML_Element $child ) {
+		$new_children = [];
+
+		foreach ( $this->children as $current_child ) {
+			if ( $current_child !== $child ) {
+				array_push( $new_children, $child );
+			}
+		}
+
+		$this->children = $new_children;
+	}
+
 	public function set_content( $content ) {
 		$this->content = $content;
 	}

@@ -5,13 +5,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Page_Title extends Component {
-	public function __construct( $title, $id = null, $classes = [] ) {
-		parent::__construct( 'h1', false, $id, $classes );
+class Heading extends Component {
+	public function __construct( $size, $title, $id = null, $classes = [] ) {
+		parent::__construct( sprintf( 'h%d', $size ), false, $id, $classes );
 
 		$this->add_style_bulk( [
 			'color' => $this->get_theme()->color_text_primary,
-			'margin' => '0',
 		] );
 
 		$this->set_title( $title );
