@@ -14,6 +14,7 @@ class HTML_Theme {
 	public $color_primary;
 	public $color_primary_shade;
 	public $color_primary_tint;
+	public $color_primary_tint_strong;
 	public $color_success;
 	public $color_text_primary;
 	public $color_text_secondary;
@@ -28,6 +29,7 @@ class HTML_Theme {
 		$this->color_primary = Settings::$COLOR_PRIMARY;
 		$this->color_primary_shade = Settings::$COLOR_PRIMARY_SHADE;
 		$this->color_primary_tint = Settings::$COLOR_PRIMARY_TINT;
+		$this->color_primary_tint_strong = Settings::$COLOR_PRIMARY_TINT_STRONG;
 		$this->color_success = Settings::$COLOR_SUCCESS;
 		$this->color_text_primary = Settings::$COLOR_TEXT_PRIMARY;
 		$this->color_text_secondary = Settings::$COLOR_TEXT_SECONDARY;

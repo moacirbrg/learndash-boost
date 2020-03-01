@@ -15,7 +15,7 @@ class Page_Header extends Component {
 			'box-shadow' => '0 0 2px ' . $this->get_theme()->color_primary_shade,
 			'margin-bottom' => $this->to_px( $this->get_theme()->layout_page_padding_px * 2 ),
 			'margin-left' => $this->to_px( - $this->get_theme()->layout_page_padding_px ),
-			'padding' => $this->to_px( $this->get_theme()->layout_page_padding_px )
+			'padding' => sprintf( '%dpx %dpx', $this->get_theme()->layout_page_padding_px, $this->get_theme()->layout_page_padding_px * 2 )
 		] );
 
 		$children = $this->create_children_components( $title );

@@ -11,6 +11,7 @@ class Page_Title extends Component {
 
 		$this->add_style_bulk( [
 			'color' => $this->get_theme()->color_text_primary,
+			'font-size' => '1rem',
 			'margin' => '0',
 		] );
 

@@ -10,7 +10,8 @@ class Container extends Component {
 		parent::__construct( 'div', false, $id, $classes );
 
 		$this->add_style_bulk( [
-			'width' =>  sprintf( 'calc(100%% - %s)', $this->to_px( $this->get_theme()->layout_page_padding_px ) ),
+			'margin-left' => $this->to_px( $this->get_theme()->layout_page_padding_px ),
+			'width' =>  sprintf( 'calc(100%% - %s)', $this->to_px( $this->get_theme()->layout_page_padding_px * 3 ) ),
 		] );
 	}
 }

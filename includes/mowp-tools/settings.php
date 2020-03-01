@@ -12,6 +12,7 @@ class Settings {
 	public static $COLOR_PRIMARY = '#ffffff';
 	public static $COLOR_PRIMARY_SHADE = '#ccd0d4';
 	public static $COLOR_PRIMARY_TINT = '#f9f9f9';
+	public static $COLOR_PRIMARY_TINT_STRONG = '#dddddd';
 	public static $COLOR_SUCCESS = '#7ad03a';
 	public static $COLOR_TEXT_PRIMARY = '#23282d';
 	public static $COLOR_TEXT_SECONDARY = '#444444';
