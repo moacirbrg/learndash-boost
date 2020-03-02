@@ -30,4 +30,9 @@ class Panel extends Component {
 		$this->header = $header;
 		$this->append_child( $header );
 	}
+
+	public function enable_form() {
+		$this->set_tag_name( 'form' );
+		$this->add_attribute( 'method', 'POST' );
+	}
 }

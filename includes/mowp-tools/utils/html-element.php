@@ -86,6 +86,10 @@ class HTML_Element {
 		$this->content = $content;
 	}
 
+	public function set_tag_name( $tag_name ) {
+		$this->tag_name = $tag_name;
+	}
+
 	public function to_px( $measure ) {
 		return  $measure . 'px';
 	}
