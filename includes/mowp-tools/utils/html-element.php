@@ -55,7 +55,9 @@ class HTML_Element {
 	}
 
 	public function build_html() {
-		if ( $this->self_closed_tag === true ) {
+		if ( $this->tag_name === null ) {
+			return $this->build_html_ghost();
+		} else if ( $this->self_closed_tag === true ) {
 			return $this->build_self_closed_html();
 		} else {
 			return $this->build_html_non_self_closed();
@@ -126,6 +128,16 @@ class HTML_Element {
 		} else {
 			return '';
 		}
+	}
+
+	private function build_html_ghost() {
+		$html = '';
+
+		foreach ( $this->children as $child ) {
+			$html .= $child->build_html();
+		}
+
+		return $html;
 	}
 
 	private function build_html_non_self_closed() {

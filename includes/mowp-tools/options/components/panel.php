@@ -22,6 +22,11 @@ class Panel extends Component {
 		}
 	}
 
+	public function activate_form() {
+		$this->set_tag_name( 'form' );
+		$this->add_attribute( 'method', 'POST' );
+	}
+
 	public function set_header( Panel_Header $header ) {
 		if ( isset( $this->header ) ) {
 			$this->remove_child( $this->header );
@@ -29,10 +34,5 @@ class Panel extends Component {
 
 		$this->header = $header;
 		$this->append_child( $header );
-	}
-
-	public function enable_form() {
-		$this->set_tag_name( 'form' );
-		$this->add_attribute( 'method', 'POST' );
 	}
 }

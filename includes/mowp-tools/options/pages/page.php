@@ -7,4 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Page extends HTML_Element { }
+class Page extends HTML_Element {
+	public static $PAGE_WIDTH_FULL = 0;
+	public static $PAGE_WIDTH_800 = 1;
+}

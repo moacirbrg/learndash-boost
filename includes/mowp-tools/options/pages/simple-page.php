@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Simple_Page extends Page {
 	private $container;
 
-	public function __construct( $title ) {
+	public function __construct( $title, $page_width ) {
 		parent::__construct( 'div', false, null, ['page'] );
 
-		$children = $this->create_children_components( $title );
+		$children = $this->create_children_components( $title, $page_width );
 
 		foreach ( $children as $child ) {
 			$this->append_child( $child );
@@ -26,13 +26,13 @@ class Simple_Page extends Page {
 		$this->container->append_child( $child );
 	}
 
-	private function create_children_components( $title ) {
+	private function create_children_components( $title, $page_width ) {
 		$children = [];
 
 		$page_title = new Page_Header( $title );
 		array_push( $children, $page_title );
 
-		$container = new Container();
+		$container = new Container( $page_width );
 		array_push( $children, $container );
 		$this->container = $container;
 

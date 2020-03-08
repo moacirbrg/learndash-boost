@@ -29,7 +29,7 @@ class Panel_Ribbon extends Component {
 		$title_component = new Heading( 3, $title );
 		$title_component->add_style_bulk( [
 			'color' => $this->get_theme()->color_text_secondary,
-			'font-size' => '1.125rem',
+			'font-size' => '1rem',
 			'font-weight' => '400',
 			'margin' => '0'
 		] );
