@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Learndash Boost\n"
-"POT-Creation-Date: 2020-03-01 19:20-0300\n"
-"PO-Revision-Date: 2020-03-01 19:20-0300\n"
+"POT-Creation-Date: 2020-03-08 22:04-0300\n"
+"PO-Revision-Date: 2020-03-08 22:04-0300\n"
 "Last-Translator: Moacir Braga <contato@moacirbrg.org>\n"
 "Language-Team: Moacir Braga <contato@moacirbrg.org>\n"
 "Language: pt_BR\n"
@@ -21,15 +21,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/admin/woocommerce-integration-admin-page.php:14
+#: includes/admin/woocommerce-integration-admin-page.php:19
 msgid "WooCommerce Integration"
 msgstr "Integração do WooCommerce"
 
-#: includes/admin/woocommerce-integration-admin-page.php:17
+#: includes/admin/woocommerce-integration-admin-page.php:22
 msgid "New Customers"
 msgstr "Novos Usuários"
 
-#: includes/admin/woocommerce-integration-admin-page.php:18
+#: includes/admin/woocommerce-integration-admin-page.php:23
 msgid ""
 "When an user is created via a new purchase, the following settings will be "
 "applied."
@@ -37,9 +37,21 @@ msgstr ""
 "Quando um usuário for criado via uma nova compra, as seguintes configurações "
 "serão aplicadas."
 
-#: includes/admin/woocommerce-integration-admin-page.php:22
+#: includes/admin/woocommerce-integration-admin-page.php:28
 msgid "A welcome e-mail will be sent"
 msgstr "Um e-mail de boas-vindas será enviado"
+
+#: includes/admin/woocommerce-integration-admin-page.php:33
+msgid "Email subject"
+msgstr "Assunto do e-mail"
+
+#: includes/admin/woocommerce-integration-admin-page.php:34
+msgid "Email message"
+msgstr "Mensagem do e-mail"
+
+#: includes/admin/woocommerce-integration-admin-page.php:36
+msgid "Save changes"
+msgstr "Salvar alterações"
 
 #. Plugin Name of the plugin/theme
 #: includes/learndash-boost.php:46

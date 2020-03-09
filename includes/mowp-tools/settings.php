@@ -20,6 +20,7 @@ class Settings {
 
 	public static $LAYOUT_BUTTON_HEIGHT_PX = 35;
 	public static $LAYOUT_BUTTON_PADDING_PX = 16;
+	public static $LAYOUT_INPUT_HEIGHT_PX = 36;
 	public static $LAYOUT_PAGE_PADDING_PX = 20;
 	public static $LAYOUT_PANEL_PADDING_PX = 20;
 
