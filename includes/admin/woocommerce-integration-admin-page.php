@@ -3,6 +3,7 @@ namespace Learndash_Boost\Admin;
 
 use Learndash_Boost\MOWP_Tools\Options\Pages\Page;
 use Learndash_Boost\MOWP_Tools\Options\Components\Field;
+use Learndash_Boost\MOWP_Tools\Options\Components\Field_Textarea;
 use Learndash_Boost\MOWP_Tools\Options\Components\Input;
 use Learndash_Boost\MOWP_Tools\Options\Components\Panel;
 use Learndash_Boost\MOWP_Tools\Options\Components\Panel_Container;
@@ -31,7 +32,7 @@ class Woocommerce_Integration_Admin_Page extends Admin_Page {
 		$new_customer_panel->append_child( $new_customer_panel_container );
 
 		$new_customer_panel_container->append_child( new Field( 'subject', __( 'Email subject', LEARNDASH_BOOST_NS ), Input::$TYPE_TEXT ) );
-		$new_customer_panel_container->append_child( new Field( 'message', __( 'Email message', LEARNDASH_BOOST_NS ), Input::$TYPE_TEXT ) );
+		$new_customer_panel_container->append_child( new Field_Textarea( 'message', __( 'Email message', LEARNDASH_BOOST_NS ), 5 ) );
 
 		$new_customer_panel->append_child( new Panel_Footer_Submit( __( 'Save changes', LEARNDASH_BOOST_NS ) ) );
 

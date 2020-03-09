@@ -21,8 +21,10 @@ class MOWP_Tools {
 			include_once dirname( __FILE__ ) . '/options/components/button.php';
 			include_once dirname( __FILE__ ) . '/options/components/container.php';
 			include_once dirname( __FILE__ ) . '/options/components/input.php';
+			include_once dirname( __FILE__ ) . '/options/components/textarea.php';
 			include_once dirname( __FILE__ ) . '/options/components/label.php';
 			include_once dirname( __FILE__ ) . '/options/components/field.php';
+			include_once dirname( __FILE__ ) . '/options/components/field-textarea.php';
 			include_once dirname( __FILE__ ) . '/options/components/heading.php';
 			include_once dirname( __FILE__ ) . '/options/components/hr.php';
 			include_once dirname( __FILE__ ) . '/options/components/page-header.php';
