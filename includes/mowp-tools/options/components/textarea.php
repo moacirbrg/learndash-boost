@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Textarea extends Component {
-	public function __construct( $name, $rows = 3, $id = null, $classes = [] ) {
+	public function __construct( $name, $rows = 5, $id = null, $classes = [] ) {
 		parent::__construct( 'textarea', false, $id, $classes );
 
 		$this->add_style_bulk( [
