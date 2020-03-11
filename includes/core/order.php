@@ -12,8 +12,13 @@ class Order {
 		$email = $order->get_billing_email();
 		$first_name = $order->get_billing_first_name();
 		$last_name = $order->get_billing_last_name();
+		$product_name = '';
+		
+		foreach ( $order->get_items() as $order_item ) {
+			$product_name = $order_item->get_name();
+		}
 
-		$user_id = User::create_user_if_not_exists( $email, $first_name, $last_name );
+		$user_id = User::create_user_if_not_exists( $email, $first_name, $last_name, $product_name );
 
 		if ( $user_id === null ) {
 			return false;

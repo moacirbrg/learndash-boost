@@ -1,6 +1,7 @@
 <?php
 namespace Learndash_Boost\Core;
 
+use Learndash_Boost\Learndash_Boost_Options;
 use Learndash_Boost\MOWP_Tools\Integrations\Woocommerce\Log;
 use Learndash_Boost\MOWP_Tools\Utils\Template;
 
@@ -24,7 +25,7 @@ class User {
 		return null;
 	}
 
-	public static function create_user_if_not_exists( $email, $first_name, $last_name ) {
+	public static function create_user_if_not_exists( $email, $first_name, $last_name, $product_name ) {
 		if ( ! email_exists( $email ) ) {
 			$username = self::create_unique_username_by_fullname( $first_name, $last_name );
 			if ( $username === null ) {
@@ -44,17 +45,19 @@ class User {
 			$user->remove_role( 'subscriber' );
 			$user->add_role( 'customer' );
 
-			$email_template_replacements = array(
-				'first_name' => $first_name,
-				'url' => get_permalink( get_option('woocommerce_myaccount_page_id') ),
+			$replacements = array(
+				'customer_name' => $first_name,
 				'email' => $email,
-				'username' => $username,
+				'login_url' => get_permalink( get_option('woocommerce_myaccount_page_id') ),
 				'password' => htmlspecialchars( $password, ENT_HTML5 ),
-				'site_name' => get_bloginfo( 'name' )
+				'product_name' => $product_name,
+				'username' => $username
 			);
-			$email_message = Template::get_from_file( 'email-new-user.html', $email_template_replacements );
+			
+			$email_message = Template::get_from_string( Learndash_Boost_Options::get_new_customer_email_message(), $replacements );
+			$email_subject = Template::get_from_string( Learndash_Boost_Options::get_new_customer_email_subject(), $replacements );
 			$email_headers = array( 'Content-Type: text/html; charset=UTF-8' );
-			wp_mail( $email, 'Sua conta foi criada', $email_message, $email_headers );
+			wp_mail( $email, $email_subject, $email_message, $email_headers );
 
 			return $user_id;
 		}

@@ -25,12 +25,15 @@ class Learndash_Boost_Options {
 			$message .= sprintf( '<p>%s</p>%s', __( 'It is everything ready for you access to your new training.', LEARNDASH_BOOST_NS ), PHP_EOL );
 			$message .= sprintf( '<p>%s', PHP_EOL );
 			$message .= sprintf( '  %s<br/>%s', __( 'You can access the content using the following credentials:', LEARNDASH_BOOST_NS ), PHP_EOL );
-			$message .= sprintf( '  <strong>%s</strong> <a href=“{{login_url}}”>{{login_url}}</a><br/>%s', __( 'Access link:', LEARNDASH_BOOST_NS ), PHP_EOL );
-			$message .= sprintf( '  <strong>%s</strong>: {{username}}<br/>%s', __( 'Login:', LEARNDASH_BOOST_NS ), PHP_EOL );
-			$message .= sprintf( '  <strong>%s</strong>: {{password}}<br/>%s', __( 'Password:', LEARNDASH_BOOST_NS ), PHP_EOL );
+			$message .= sprintf( '  <strong>%s</strong> <a href="{{login_url}}">{{login_url}}</a><br/>%s', __( 'Access link:', LEARNDASH_BOOST_NS ), PHP_EOL );
+			$message .= sprintf( '  <strong>%s</strong> {{username}}<br/>%s', __( 'Login:', LEARNDASH_BOOST_NS ), PHP_EOL );
+			$message .= sprintf( '  <strong>%s</strong> {{password}}<br/>%s', __( 'Password:', LEARNDASH_BOOST_NS ), PHP_EOL );
 			$message .= sprintf( '</p>%s', PHP_EOL );
 			$message .= sprintf( '<p>%s</p>%s', __( 'Enjoy your training!', LEARNDASH_BOOST_NS ), PHP_EOL );
-			$message .= sprintf( '<p>%s<br/>{{from_name}}</p>%s', __( 'Thank you so much,', LEARNDASH_BOOST_NS ), PHP_EOL );
+			$message .= sprintf( '<p>%s', PHP_EOL );
+			$message .= sprintf( '  %s<br/>%s', __( 'Thank you so much,', LEARNDASH_BOOST_NS ), PHP_EOL );
+			$message .= sprintf( '  %s%s', __( 'Your name', LEARNDASH_BOOST_NS ), PHP_EOL );
+			$message .= sprintf( '</p>' );
 			Learndash_Boost_Utils::add_option( 'new-customer-email-message', $message );
 		}
 	}

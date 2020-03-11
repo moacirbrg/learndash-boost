@@ -50,7 +50,7 @@ class Woocommerce_Integration_Admin_Page extends Admin_Page {
 	}
 
 	private function process_form( $email_message, $email_subject ) {
-		Learndash_Boost_Options::update_new_customer_email_message( $email_message );
-		Learndash_Boost_Options::update_new_customer_email_subject( $email_subject );
+		Learndash_Boost_Options::update_new_customer_email_message( stripslashes( $email_message ) );
+		Learndash_Boost_Options::update_new_customer_email_subject( stripslashes( $email_subject ) );
 	}
 }
