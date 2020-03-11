@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Learndash Boost\n"
-"POT-Creation-Date: 2020-03-08 22:04-0300\n"
-"PO-Revision-Date: 2020-03-08 22:04-0300\n"
+"POT-Creation-Date: 2020-03-10 20:41-0300\n"
+"PO-Revision-Date: 2020-03-10 20:41-0300\n"
 "Last-Translator: Moacir Braga <contato@moacirbrg.org>\n"
 "Language-Team: Moacir Braga <contato@moacirbrg.org>\n"
 "Language: pt_BR\n"
@@ -21,15 +21,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/admin/woocommerce-integration-admin-page.php:19
+#: includes/admin/woocommerce-integration-admin-page.php:20
 msgid "WooCommerce Integration"
 msgstr "Integração do WooCommerce"
 
-#: includes/admin/woocommerce-integration-admin-page.php:22
+#: includes/admin/woocommerce-integration-admin-page.php:23
 msgid "New Customers"
 msgstr "Novos Usuários"
 
-#: includes/admin/woocommerce-integration-admin-page.php:23
+#: includes/admin/woocommerce-integration-admin-page.php:24
 msgid ""
 "When an user is created via a new purchase, the following settings will be "
 "applied."
@@ -37,24 +37,60 @@ msgstr ""
 "Quando um usuário for criado via uma nova compra, as seguintes configurações "
 "serão aplicadas."
 
-#: includes/admin/woocommerce-integration-admin-page.php:28
+#: includes/admin/woocommerce-integration-admin-page.php:29
 msgid "A welcome e-mail will be sent"
 msgstr "Um e-mail de boas-vindas será enviado"
 
-#: includes/admin/woocommerce-integration-admin-page.php:33
+#: includes/admin/woocommerce-integration-admin-page.php:34
 msgid "Email subject"
 msgstr "Assunto do e-mail"
 
-#: includes/admin/woocommerce-integration-admin-page.php:34
+#: includes/admin/woocommerce-integration-admin-page.php:35
 msgid "Email message"
 msgstr "Mensagem do e-mail"
 
-#: includes/admin/woocommerce-integration-admin-page.php:36
+#: includes/admin/woocommerce-integration-admin-page.php:37
 msgid "Save changes"
 msgstr "Salvar alterações"
 
+#: includes/learndash-boost-options.php:11
+msgid "{{customer_name}}, your credentials to access {{product_name}}"
+msgstr "{{customer_name}}, suas credenciais para acessar {{product_name}}"
+
+#: includes/learndash-boost-options.php:16
+msgid "Thank you for your subscrition to {{product_name}}!"
+msgstr "Obrigado por se inscrever no {{product_name}}!"
+
+#: includes/learndash-boost-options.php:17
+msgid "It is everything ready for you access to your new training."
+msgstr "Está tudo pronto para você acessar o seu novo curso."
+
+#: includes/learndash-boost-options.php:18
+msgid "You can access the content using the following credentials:"
+msgstr "Seguem as suas credenciais logo abaixo:"
+
+#: includes/learndash-boost-options.php:19
+msgid "Access link:"
+msgstr "Link de acesso:"
+
+#: includes/learndash-boost-options.php:20
+msgid "Login:"
+msgstr "Login:"
+
+#: includes/learndash-boost-options.php:21
+msgid "Password:"
+msgstr "Senha:"
+
+#: includes/learndash-boost-options.php:22
+msgid "Enjoy your training!"
+msgstr "Aproveite seu curso!"
+
+#: includes/learndash-boost-options.php:23
+msgid "Thank you so much,"
+msgstr "Muito obrigado,"
+
 #. Plugin Name of the plugin/theme
-#: includes/learndash-boost.php:46
+#: includes/learndash-boost.php:48
 msgid "Learndash Boost"
 msgstr "Learndash Boost"
 

@@ -13,8 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Learndash_Boost {
 	public static function init() {
-		self::init_mowp_tools();
+		register_activation_hook( LEARNDASH_BOOST_ROOT_PATH, array( 'Learndash_Boost\Learndash_Boost_Options', 'on_activate' ) );
+		register_deactivation_hook( LEARNDASH_BOOST_ROOT_PATH, array( 'Learndash_Boost\Learndash_Boost_Options', 'on_deactivate' ) );
 
+		self::init_mowp_tools();
 		self::include_frontend_dependencies();
 		self::init_frontend();
 		

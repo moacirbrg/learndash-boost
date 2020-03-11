@@ -27,6 +27,8 @@ define( 'LEARNDASH_BOOST_SLUG', 'learndash-boost' );
 
 if ( ! class_exists( '\Learndash_Boost\Learndash_Boost' ) ) {
 	include_once dirname( LEARNDASH_BOOST_ROOT_PATH ) . '/includes/mowp-tools/mowp-tools.php';
+	include_once dirname( LEARNDASH_BOOST_ROOT_PATH ) . '/includes/learndash-boost-utils.php';
+	include_once dirname( LEARNDASH_BOOST_ROOT_PATH ) . '/includes/learndash-boost-options.php';
 	include_once dirname( LEARNDASH_BOOST_ROOT_PATH ) . '/includes/learndash-boost.php';
 
 	MOWP_Tools::init();

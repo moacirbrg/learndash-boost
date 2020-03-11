@@ -1,6 +1,7 @@
 <?php
 namespace Learndash_Boost\Admin;
 
+use Learndash_Boost\Learndash_Boost_Options;
 use Learndash_Boost\MOWP_Tools\Options\Pages\Page;
 use Learndash_Boost\MOWP_Tools\Options\Components\Field;
 use Learndash_Boost\MOWP_Tools\Options\Components\Field_Textarea;
@@ -17,6 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Woocommerce_Integration_Admin_Page extends Admin_Page {
 	public function __construct() {
+		if ( isset( $_POST[ 'message' ] ) && isset( $_POST[ 'subject' ] ) ) {
+			$this->process_form( $_POST[ 'message' ], $_POST[ 'subject' ] );
+		}
+
 		$title = __( 'WooCommerce Integration', LEARNDASH_BOOST_NS );
 		$page = new Simple_Page( $title, Page::$PAGE_WIDTH_800 );
 		
@@ -31,11 +36,21 @@ class Woocommerce_Integration_Admin_Page extends Admin_Page {
 		$new_customer_panel_container = new Panel_Container();
 		$new_customer_panel->append_child( $new_customer_panel_container );
 
-		$new_customer_panel_container->append_child( new Field( 'subject', __( 'Email subject', LEARNDASH_BOOST_NS ), Input::$TYPE_TEXT ) );
-		$new_customer_panel_container->append_child( new Field_Textarea( 'message', __( 'Email message', LEARNDASH_BOOST_NS ), 5 ) );
+		$email_subject_field = new Field( 'subject', __( 'Email subject', LEARNDASH_BOOST_NS ), Input::$TYPE_TEXT );
+		$email_subject_field->set_value( Learndash_Boost_Options::get_new_customer_email_subject() );
+		$new_customer_panel_container->append_child( $email_subject_field );
+
+		$email_message_field = new Field_Textarea( 'message', __( 'Email message', LEARNDASH_BOOST_NS ), 5 );
+		$email_message_field->set_value( Learndash_Boost_Options::get_new_customer_email_message() );
+		$new_customer_panel_container->append_child( $email_message_field );
 
 		$new_customer_panel->append_child( new Panel_Footer_Submit( __( 'Save changes', LEARNDASH_BOOST_NS ) ) );
 
 		parent::__construct( $page );
+	}
+
+	private function process_form( $email_message, $email_subject ) {
+		Learndash_Boost_Options::update_new_customer_email_message( $email_message );
+		Learndash_Boost_Options::update_new_customer_email_subject( $email_subject );
 	}
 }
